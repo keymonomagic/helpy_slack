@@ -5,7 +5,7 @@ Post.class_eval do
 #  protected
 
   def ping_slack
-    return false unless self.kind == 'first' # Only ping for new topics
+    # return false unless self.kind == 'first' # Only ping for new topics
 
     # Actually fire the ping, split for private/public topics
     if self.topic.forum.private?
