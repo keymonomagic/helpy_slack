@@ -7,7 +7,10 @@ class SlackJob < ActiveJob::Base
     message = {
       title: "<#{url}|#{post.topic.name}>",
       text: post.body,
-      color: '#eee'
+      color: '#eee',
+      topic_id: post.topic.id,
+      keymono_chat_id: post.topic.keymono_chat_id,
+      keymono_message_id: post.topic.keymono_message_id
     }
 
     # Send Ping
