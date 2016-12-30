@@ -10,7 +10,8 @@ class SlackJob < ActiveJob::Base
       color: '#eee',
       topic_id: post.topic.id,
       keymono_chat_id: post.topic.keymono_chat_id,
-      keymono_message_id: post.topic.keymono_message_id
+      keymono_message_id: post.topic.keymono_message_id,
+      images: post.attachments
     }
 
     # Send Ping
